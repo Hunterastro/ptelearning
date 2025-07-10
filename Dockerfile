@@ -4,11 +4,11 @@ FROM node:18-alpine
 # 设置工作目录
 WORKDIR /app
 
-# 复制 package.json 和 package-lock.json
-COPY package*.json ./
+# 复制 package.json
+COPY package.json ./
 
-# 安装依赖
-RUN npm ci --only=production && npm cache clean --force
+# 安装依赖 - 使用npm install而不是npm ci
+RUN npm install --only=production && npm cache clean --force
 
 # 复制应用代码
 COPY . .
@@ -19,6 +19,7 @@ RUN adduser -S nodeuser -u 1001
 
 # 创建上传目录并设置权限
 RUN mkdir -p uploads && chown -R nodeuser:nodejs uploads
+RUN chown -R nodeuser:nodejs /app
 
 # 切换到非root用户
 USER nodeuser

@@ -67,12 +67,24 @@ copy frontend/env.example frontend/.env
 
 完整部署指南请查看: **[DEPLOYMENT.md](./DEPLOYMENT.md)**
 
-## 🆘 需要帮助？
+## 🆘 遇到部署问题？
 
-如果遇到问题，请检查:
-1. 环境变量配置是否正确
-2. 数据库连接字符串是否有效
-3. 前后端URL是否匹配
+### 🔧 Railway部署失败？
+如果遇到npm依赖冲突错误，请查看：**[部署问题解决方案.md](./部署问题解决方案.md)**
+
+### 📚 其他问题排除
+- **完整故障排除**: [TROUBLESHOOTING.md](./TROUBLESHOOTING.md)
+- **详细部署指南**: [DEPLOYMENT.md](./DEPLOYMENT.md)
+- **部署检查清单**: [DEPLOYMENT-CHECKLIST.md](./DEPLOYMENT-CHECKLIST.md)
+
+### 🔧 快速修复工具
+```bash
+# 运行部署修复脚本
+fix-deployment.bat
+
+# 验证部署状态
+npm run verify https://your-app.railway.app
+```
 
 ---
 

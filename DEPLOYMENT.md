@@ -121,6 +121,19 @@ node set-admin.js your-email@example.com
 
 ## 🛠️ 常见问题解决
 
+### Railway部署失败 (npm依赖问题)
+**错误信息**: `npm ci can only install packages when your package.json and package-lock.json are in sync`
+
+**解决方案**:
+1. 运行 `fix-deployment.bat` 脚本
+2. 删除 `package-lock.json` 文件 (已自动处理)
+3. 提交代码更改到GitHub
+4. 在Railway中点击 "Redeploy"
+
+**备选方案**: 如果Railway持续失败，可以改用Render.com:
+- 访问 [Render.com](https://render.com)
+- 使用项目中的 `render.yaml` 配置文件部署
+
 ### CORS 错误
 - 确保后端的 `FRONTEND_URL` 环境变量正确
 - 检查前端的 `REACT_APP_API_URL` 是否正确
