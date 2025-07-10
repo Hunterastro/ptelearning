@@ -1,0 +1,81 @@
+# 依赖
+node_modules/
+frontend/node_modules/
+
+# 环境变量文件
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+frontend/.env
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+
+# 构建输出
+build/
+dist/
+frontend/build/
+frontend/dist/
+
+# 上传文件
+uploads/
+*.xlsx
+*.xls
+*.csv
+
+# 日志文件
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# 运行时数据
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# 可选的npm缓存目录
+.npm
+
+# 可选的eslint缓存
+.eslintcache
+
+# 微服务数据
+.vscode/
+.DS_Store
+Thumbs.db
+
+# PM2 配置
+ecosystem.config.js
+
+# 临时文件
+.tmp/
+.temp/
+
+# 数据库备份
+*.db
+*.sqlite
+*.sqlite3
+
+# IDE文件
+.idea/
+*.swp
+*.swo
+*~
+
+# 测试覆盖率
+coverage/
+.nyc_output/
+
+# 部署密钥
+*.pem
+*.key
+
+# Railway/Vercel 本地配置
+.railway/
+.vercel/ 
